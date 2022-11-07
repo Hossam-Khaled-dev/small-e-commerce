@@ -1,0 +1,17 @@
+<!-- <select class="form-select" aria-label="Default select example" [(ngModel)]="SelectedCategoryId" (change)="FilterProducts()"> -->
+<select class="form-select" aria-label="Default select example" [(ngModel)]="SelectedCategoryId" >
+
+        <option value="0" selected>All</option>
+        <option [value]="item.id" *ngFor="let item of Catlist">{{item.name}}</option> 
+
+  </select>
+<hr>
+
+
+<app-product-list [CatID]="SelectedCategoryId" (totalPriceChanged)="onTotalPriceChanged($event)"></app-product-list>
+
+<hr>
+Enter you name here: <input #UserName type="text" class="text">  
+<hr>
+Place Order Test <button type="button" class="btn btn-primary" (click)="UpdateQuantity()">Test</button>
+<h3>Total Price = {{RtotalPrice}}</h3>

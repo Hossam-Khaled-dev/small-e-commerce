@@ -1,0 +1,7 @@
+<h1> Branch Name: {{b1.name}}</h1>
+<h2>Branch Image: <img [src]="b1.imageUrl" *ngIf="imageState"></h2>
+<button class="btn btn-primary" value="hide" type="button" (click)="hideImage()">hide</button>
+<h3>Sub Branches : </h3>
+<li *ngFor="let item of b1.Branches">
+    <ol>item</ol>
+</li>

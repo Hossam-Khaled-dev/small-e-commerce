@@ -1,0 +1,14 @@
+<div class="card" style="width: 25rem;">
+    <img class="card-img-top" [src]="selectedProduct?.image" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{selectedProduct?.name}}</h5>
+      <h3>Product Description</h3>
+      <h4>product Quantity : {{selectedProduct?.quantity}}</h4>
+      <h4>Product Price : {{selectedProduct?.price}}</h4>
+      <button [disabled]="productId == productsIDs[0]" class="btn btn-danger" (click)="Previous()">Previous</button>
+      <button class="btn btn-primary" (click)="BackToList()">Back To List</button>
+      <button [disabled]="productId == productsIDs[productsIDs.length-1]" class="btn btn-success" (click)="Next()">Next</button>
+    </div>
+    
+  </div>
+  
